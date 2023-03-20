@@ -15,10 +15,13 @@ const displayCountries = countries => {
 } 
 
 const getCountryHtml = country => {
+    const {name, flags, area, region} = country; // distrycturing
     return`
-        <div>
-            <h2>${country.name.common}<h2/>
-            <img src = "${country.flags.png}"
+        <div class="country">
+            <h2>${name.common}<h2/>
+            <h5>Area: ${area}</h5>
+            <h5>Region: ${region}</h5>
+            <img src = "${flags.png}">
         </div>
     
     
